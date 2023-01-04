@@ -57,7 +57,7 @@ export default function Home() {
             </div>
             <div className='w-full flex justify-center flex-wrap pb-8'>
               <div className='w-full lg:w-2/6 flex flex-col items-center justify-center px-8 text-center'>
-                <div className='w-[258px] h-[258px] overflow-hidden rounded-full relative before:h-[130%] before:w-[175px] before:bg-gradient-to-t  before:from-sky-500 before:to-green-600 before:absolute before:left-10 before:-top-5 before:animate-[spin_3s_linear_infinite]'>
+                <div className='w-[258px] h-[258px] overflow-hidden rounded-full relative before:h-[130%] before:w-[175px] before:box-cst2 before:absolute before:left-10 before:-top-5 before:animate-[spin_3s_linear_infinite]'>
                   <div className='absolute top-1 left-1 rounded-full overflow-hidden w-[250px] h-[250px] flex justify-center items-center bg-[#18181B] mb-4'>
                     <Image src="/hero.png" alt='' width={220} height={150}/>
                   </div>
