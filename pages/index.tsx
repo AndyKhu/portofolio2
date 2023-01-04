@@ -46,7 +46,7 @@ export default function Home() {
         </div>
         <div className='min-h-screen w-screen flex flex-col text-white'>
           <div className='flex h-12 w-full bg-[#18181B] border-b-2 border-b-green-400 items-center px-4 text-xl'>
-            <FaRegSmileBeam className='mr-2'/> Hello!
+            <FaRegSmileBeam className='mr-2'/> Hello~
           </div>
           <div>
             <div className='flex justify-center items-center p-8 lg:pb-0 flex-wrap'>
