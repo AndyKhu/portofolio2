@@ -59,7 +59,7 @@ export default function Home() {
               <div className='w-full lg:w-2/6 flex flex-col items-center justify-center px-8 text-center'>
                 <div className='w-[258px] h-[258px] overflow-hidden rounded-full relative before:h-[130%] before:w-[175px] before:box-cst2 before:absolute before:left-10 before:-top-5 before:animate-[spin_3s_linear_infinite]'>
                   <div className='absolute top-1 left-1 rounded-full overflow-hidden w-[250px] h-[250px] flex justify-center items-center bg-[#18181B] mb-4'>
-                    <Image src="/hero.png" alt='' width={220} height={150}/>
+                    {/* <Image src="/hero.png" alt='' width={220} height={150}/> */}
                   </div>
                 </div>
                 <h3 className='mb-4 font-semibold text-3xl'>Who&apos;s this guy?</h3>
@@ -69,23 +69,23 @@ export default function Home() {
               </div>
               <div className='w-full lg:w-2/6 flex flex-col justify-center px-8 mt-8 lg:mt-0 items-center lg:items-start'>
                 <p className='flex items-center text-2xl mb-8 text-gray-300 min-w-[300px]'>
-                  <Icon name="FaTransgender" size={30} className="mr-4 text-sky-300"/>
+                  <Icon name="FaTransgender" size={30} className="mr-4 text-[#36E4DA]"/>
                   Male
                 </p>
                 <p className='flex items-center text-2xl mb-8 text-gray-300 min-w-[300px]'>
-                  <Icon name="FaCalendarAlt" size={30} className="mr-4 text-sky-300"/>
+                  <Icon name="FaCalendarAlt" size={30} className="mr-4 text-[#1DE0B1]"/>
                   02 December 1995
                 </p>
                 <p className='flex items-center text-2xl mb-8 text-gray-300 min-w-[300px]'>
-                  <Icon name="FaEnvelope" size={30} className="mr-4 text-sky-300"/>
+                  <Icon name="FaEnvelope" size={30} className="mr-4 text-[#1DE0B1]"/>
                   andykhu02@gmail.com
                 </p>
                 <p className='flex items-center text-2xl mb-8 text-gray-300 min-w-[300px]'>
-                  <Icon name="FaPhoneSquareAlt" size={30} className="mr-4 text-sky-300"/>
+                  <Icon name="FaPhoneSquareAlt" size={30} className="mr-4 text-[#00DC82]"/>
                   +6282162979120
                 </p>
                 <p className='flex items-center text-2xl mb-8 text-gray-300 min-w-[300px]'>
-                  <Icon name="FaFlag" size={30} className="mr-4 text-sky-300"/>
+                  <Icon name="FaFlag" size={30} className="mr-4 text-[#00DC82]"/>
                   Indonesia
                 </p>
                 
