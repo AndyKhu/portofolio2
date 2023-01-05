@@ -7,11 +7,17 @@
     background-clip: padding-box,border-box;
     background-origin: padding-box,border-box;
   }
+  .box-cst:hover{
+    background-image: linear-gradient(to right, #141417, #141417), linear-gradient(to right, #00DC82, #1DE0B1, #36E4DA);
+  }
   .box-cst2{
     background-image: linear-gradient(to right, #00DC82, #1DE0B1, #36E4DA);
   }
   .hexagone{
     filter: url(#round);
+  }
+  .navbar{
+    @apply !fixed top-0 left-0 z-[9999]
   }
   .hexagone::before {
     content:"";
@@ -20,9 +26,44 @@
     background:currentColor;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   }
-}
-@layer base {
-  html {
-    @apply scroll-smooth;
+  .scrollbar::-webkit-scrollbar {
+    @apply w-0
+  }
+    
+  .scrollbar::-webkit-scrollbar-track { 
+      @apply bg-transparent
+  }
+    
+  .scrollbar::-webkit-scrollbar-thumb { 
+      @apply bg-transparent
+  }
+  .scrollbar2::-webkit-scrollbar {
+    @apply md:w-2
+  }
+    
+  .scrollbar2::-webkit-scrollbar-track { 
+      @apply bg-transparent
+  }
+    
+  .scrollbar2::-webkit-scrollbar-thumb { 
+      @apply bg-[#262626] rounded-full
+  }
+  .test {
+    filter: drop-shadow(0 0 5px #00DC82)
+  }
+  .test5 {
+    filter: drop-shadow(0 0 5px #18181b)
+  }
+  .test0 {
+    filter: drop-shadow(0 0 3px #00DC82)
+  }
+  .test2 {
+    filter: drop-shadow(0 0 3px rgb(56 189 248))
+  }
+  .test3 {
+    filter: drop-shadow(0 0 3px rgb(245 158 11))
+  }
+  .test4 {
+    filter: drop-shadow(0 0 3px rgb(244 63 94))
   }
 }
