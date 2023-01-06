@@ -1,10 +1,11 @@
 import { FaRegSmileBeam } from "react-icons/fa";
-import { RefObject } from "react";
+import { RefObject, useState } from "react";
 import Icon from "./Icon";
 import Objective from "./Objective";
 
 const About = ({navref,section,refall}:{navref:RefObject<HTMLDivElement>,section:string,refall:{main:RefObject<HTMLDivElement>,home:RefObject<HTMLDivElement>,about:RefObject<HTMLDivElement>,porto:RefObject<HTMLDivElement>,contact:RefObject<HTMLDivElement>}}) => {
     const sections = ['home','about','portofolio','contact']
+    const [show,setShow] = useState(false)
     const handleOnClick = (e:string)=> {
         const mainElement = refall.main.current
         const aboutPosition = refall.home.current?.clientHeight?refall.home.current?.clientHeight:0
@@ -23,12 +24,18 @@ const About = ({navref,section,refall}:{navref:RefObject<HTMLDivElement>,section
     }
     return (
         <>
-            <div ref={navref} className={`flex h-12 w-full bg-[#18181B] border-b-2 border-b-green-400 items-center px-4 text-xl relative`}>
-                <ul className="flex w-full h-full items-center">
+            <div ref={navref} className={`flex h-12 w-full bg-[#18181B] border-b-2 border-b-green-400 items-center px-4 text-xl relative justify-end md:justify-start`}>
+                <ul className="w-full h-full items-center hidden md:flex">
                     {sections.map((item,index)=>{
                         return <li onClick={()=>{handleOnClick(item)}} key={index} className={`px-8 uppercase cursor-pointer hover:box-cst2 hover:bg-clip-text hover:text-transparent ${section==item?"box-cst2 bg-clip-text text-transparent":""}`}>{item}</li>
                     })}
                 </ul>
+                <button className="p-2 inline-block md:hidden" onClick={()=>{setShow(prev => !prev)}}><Icon name="FaBars"/></button>
+                <ul className={`w-full bg-[#18181b] absolute top-[108%] left-0 z-40 overflow-hidden transition ${show?"scale-100":"scale-0"}`}>
+                {sections.map((item,index)=>{
+                    return <li onClick={()=>{handleOnClick(item);setShow(false)}} key={index} className={`px-8 py-3 uppercase cursor-pointer hover:box-cst2 hover:bg-clip-text hover:text-transparent ${section==item?"box-cst2 bg-clip-text text-transparent":""}`}>{item}</li>
+                })}
+            </ul>
             </div>
             <div className="pt-12">
                 <div className='flex justify-center items-center p-8 lg:pb-0 flex-wrap'>
