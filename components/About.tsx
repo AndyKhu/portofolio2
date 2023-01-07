@@ -2,6 +2,7 @@ import { FaRegSmileBeam } from "react-icons/fa";
 import { RefObject, useState } from "react";
 import Icon from "./Icon";
 import Objective from "./Objective";
+import Image from "next/image";
 
 const About = ({navref,section,refall}:{navref:RefObject<HTMLDivElement>,section:string,refall:{main:RefObject<HTMLDivElement>,home:RefObject<HTMLDivElement>,about:RefObject<HTMLDivElement>,porto:RefObject<HTMLDivElement>,contact:RefObject<HTMLDivElement>}}) => {
     const sections = ['home','about','portofolio','contact']
@@ -48,7 +49,7 @@ const About = ({navref,section,refall}:{navref:RefObject<HTMLDivElement>,section
                 <div className='w-full lg:w-2/6 flex flex-col items-center justify-center px-8 text-center'>
                     <div className='w-[258px] h-[258px] overflow-hidden rounded-full relative before:h-[130%] before:w-[175px] before:box-cst2 before:absolute before:left-10 before:-top-5 before:animate-[spin_3s_linear_infinite]'>
                     <div className='absolute top-1 left-1 rounded-full overflow-hidden w-[250px] h-[250px] flex justify-center items-center bg-[#18181B] mb-4'>
-                        {/* <Image src="/hero.png" alt='' width={220} height={150}/> */}
+                        <Image src="/hero.png" alt='' width={220} height={150}/>
                     </div>
                     </div>
                     <h3 className='mb-4 font-semibold text-3xl'>Who&apos;s this guy?</h3>
